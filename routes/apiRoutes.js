@@ -2,11 +2,7 @@ const router = require("express").Router();
 const { response } = require("express");
 const fs = require("fs");
 const db = require("../db/db.json");
-//const { uuidv1: uuidv1} = require('uuid/v1');
 
-const util = require("util");
-const readFileAsync = util.promisify(fs.readFile);
-const writeFileAsync = util.promisify(fs.writeFile);
 
 // get all notes
 router.get("/notes", function (req, res) {
@@ -36,13 +32,13 @@ router.post("/notes", function (req, res) {
 // delete existing note by id
 router.delete("/notes/:id", function (req, res) {
   const id = req.params.id;
-
+  // remove note by id
   db.splice(id - 1, 1);
-
+  // loop through to identify id selected for deletion
   db.forEach((data, i) => {
     data.id = i + 1;
   });
-
+  // display remaining notes 
   fs.writeFile("./db/db.json", JSON.stringify(db), function () {
     res.json(db);
   });
