@@ -5,7 +5,7 @@
 ##  Description
 Note-Taker is an Express application which allows the user to create, view, and remove notes. Using Express, the note data is persistent until it is deleted by the user.
 
-The application can be accessed [here](https://polar-beyond-62874.herokuapp.com/).
+The application is hosted by Heroku and can be accessed [here](https://polar-beyond-62874.herokuapp.com/).
 ##  Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
