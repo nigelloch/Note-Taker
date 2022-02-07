@@ -28,7 +28,6 @@ Please see the video demonstration [here](https://watch.screencastify.com/v/GPFU
 
 ![alt text](./public/assets/images/note-taker2.png)
 
-![alt text](./public/assets/images/note-taker3.png)
 
 ##  Tests
 
